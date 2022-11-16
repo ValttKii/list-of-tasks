@@ -7,4 +7,28 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+
+
+    //päivä värit
+    <color name="paiva1">#B8D8D8</color>
+    <color name="paiva2">#7A9E9F</color>
+    <color name="paiva3">#4F6367</color>
+    <color name="paiva4">#EEF5DB</color>
+    <color name="paiva5">#FE5F55</color>
+
+    //yö värit
+
+    <color name="mate_black">#111111</color> //yö teema (elä koske ikinä)
+
+    <color name="yo1">#131862</color>
+    <color name="yo2">#2e4482</color>
+    <color name="yo3">#546bab</color>
+    <color name="yo4">#87899c</color>
+    <color name="yo5">#bea9de</color>
+
+
+
+
 </resources>
