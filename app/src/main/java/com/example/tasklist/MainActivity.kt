@@ -7,6 +7,7 @@ import android.widget.CompoundButton
 import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -32,6 +33,11 @@ class MainActivity : AppCompatActivity() {
         val btnNext = findViewById<Button>(R.id.btnNext)
         btnNext.setOnClickListener {
             val intent = Intent(this, CreaDelActivity::class.java)
+            startActivity(intent)
+        }
+        val btnFavorites = findViewById<Button>(R.id.btnFavorites)
+        btnFavorites.setOnClickListener {
+            val intent = Intent(this, FavoritesActivity::class.java)
             startActivity(intent)
         }
     }
