@@ -11,11 +11,11 @@
         android:id="@+id/tvTodoTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
         android:layout_marginStart="4dp"
         android:text="Example"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/cbDone"
+        app:layout_constraintEnd_toStartOf="@+id/starCheck"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.508" />
@@ -27,12 +27,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
+        android:layout_marginStart="248dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/cbDone"
+
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
-        android:id="@+id/cbDone"
+    <Button
+        android:text="Delete"
+        android:id="@+id/btnDeleteTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
