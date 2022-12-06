@@ -9,18 +9,16 @@ interface TaskDao {
     @Query("SELECT * FROM task_table")
     fun getAll(): LiveData<List<Task>>
 
-    //@Query("SELECT * FROM task_table WHERE task_nro LIKE :lkm LIMIT 1")
-    //suspend fun findByLkm(lkm: Int): Task
+    @Query("SELECT * FROM task_table WHERE isFavorite = 1")
+    fun getFavorites(): LiveData<List<Task>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(task: Task)
 
+    @Query("UPDATE task_table SET isFavorite = :value WHERE id = :id")
+    suspend fun setFavorite(id: Int, value: Boolean)
+
     @Delete
     fun deleteOneTask(task: Task)
 
-    //@Query("DELETE FROM task_table")
-    // suspend fun deleteAll(task: Task)
-
-    //@Query("DELETE FROM task_table WHERE Id = id")
-    // suspend fun deleteTask(int: Int)
 }

@@ -15,13 +15,13 @@
         android:text="Example"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/starCheck"
+        app:layout_constraintEnd_toStartOf="@+id/cbStarCheck"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.508" />
 
     <CheckBox
-        android:id="@+id/starCheck"
+        android:id="@+id/cbStarCheck"
         style="?android:attr/starStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

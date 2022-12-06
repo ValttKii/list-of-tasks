@@ -50,11 +50,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, CreaDelActivity::class.java)
             startActivity(intent)
         }
-        val btnFavorites = findViewById<Button>(R.id.btnFavorites)
-        btnFavorites.setOnClickListener {
-            val intent = Intent(this, FavoritesActivity::class.java)
-            startActivity(intent)
-        }
+
     }
 
     //Käynnistää applikaation uudelleen, jolloin lataa tallennetun teeman käyttöön

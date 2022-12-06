@@ -9,5 +9,6 @@ import androidx.room.PrimaryKey
 data class Task(
     @PrimaryKey(autoGenerate = true) val id: Int?,
     @ColumnInfo(name = "task_name") val taskName: String?,
+    @ColumnInfo(name = "isFavorite") var isFavorite: Boolean?
     //@ColumnInfo(name = "task_nro") val taskNro: Int?,
 )

@@ -1,7 +1,10 @@
 package com.example.tasklist
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,7 +30,7 @@ class CreaDelActivity : AppCompatActivity() {
 
         viewModel.allTasks.observe(this) {
             items = it
-            binding.rvTodoItems.adapter = TodoAdapter(items, ::deleteTask)
+            binding.rvTodoItems.adapter = TodoAdapter(items, ::deleteTask, ::changeValue)
         }
         setContentView(binding.root)
         binding.rvTodoItems.apply {
@@ -39,12 +42,26 @@ class CreaDelActivity : AppCompatActivity() {
         }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.item_opt_menu, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem) : Boolean {
+
+        when(item.itemId){
+            R.id.action_favorite ->
+                startActivity(Intent(this, FavoriteActivity::class.java))
+
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
     private fun writeData() {
         val taskName = binding.etTodoTitle.text.toString()
 
         if (taskName.isNotEmpty()) {
             val task = Task(
-                null, taskName
+                null, taskName, false
             )
             viewModel.insertTask(task)
             binding.etTodoTitle.text.clear()
@@ -57,6 +74,10 @@ class CreaDelActivity : AppCompatActivity() {
 
     private fun deleteTask(task: Task) {
         viewModel.deleteTask(task)
+    }
+    private fun changeValue(task: Task){
+
+        viewModel.updateTask(task)
     }
 
 }

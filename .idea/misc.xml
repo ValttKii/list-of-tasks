@@ -3,12 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ollil/AndroidStudioProjects/list-of-tasks/app/src/main/res/layout/activity_favorites.xml" value="0.14722222222222223" />
         <entry key="..\:/Users/ollil/AndroidStudioProjects/list-of-tasks/app/src/main/res/layout/activity_main.xml" value="0.23125" />
-        <entry key="..\:/Users/ollil/AndroidStudioProjects/list-of-tasks/app/src/main/res/layout/creadel_todo.xml" value="0.1" />
-        <entry key="..\:/Users/ollil/AndroidStudioProjects/list-of-tasks/app/src/main/res/layout/favorites_todo.xml" value="0.22" />
-        <entry key="..\:/Users/ollil/AndroidStudioProjects/list-of-tasks/app/src/main/res/layout/item_todo.xml" value="0.1" />
+        <entry key="..\:/Users/vallu/AndroidStudioProjects/TaskList/app/src/main/res/drawable/ic_favorite.xml" value="0.1855" />
+        <entry key="..\:/Users/vallu/AndroidStudioProjects/TaskList/app/src/main/res/layout/activity_main.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/vallu/AndroidStudioProjects/TaskList/app/src/main/res/layout/creadel_todo.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/vallu/AndroidStudioProjects/TaskList/app/src/main/res/layout/favorites_todo.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/vallu/AndroidStudioProjects/TaskList/app/src/main/res/layout/item_favorite.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/vallu/AndroidStudioProjects/TaskList/app/src/main/res/layout/item_todo.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/vallu/AndroidStudioProjects/TaskList/app/src/main/res/menu/item_fav_menu.xml" value="0.365625" />
+        <entry key="..\:/Users/vallu/AndroidStudioProjects/TaskList/app/src/main/res/menu/item_opt_menu.xml" value="0.365625" />
         <entry key="..\:/list-of-tasks/app/src/main/res/drawable-night/bg_btn.xml" value="0.2755" />
         <entry key="..\:/list-of-tasks/app/src/main/res/drawable-night/bg_et.xml" value="0.2755" />
         <entry key="..\:/list-of-tasks/app/src/main/res/drawable-night/bg_main.xml" value="0.2755" />

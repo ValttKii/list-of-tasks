@@ -8,7 +8,8 @@ import kotlinx.android.synthetic.main.item_favorite.view.*
 
 class FavAdapter(
 
-    private val Favor: MutableList<FavoritesActivity>
+    private val Favor: List<Task>
+
 ) : RecyclerView.Adapter<FavAdapter.FavorViewHolder>() {
 
     class FavorViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
@@ -16,7 +17,7 @@ class FavAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavorViewHolder {
         return FavorViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.favorites_todo,
+                R.layout.item_favorite,
                 parent,
                 false
             )
@@ -25,7 +26,7 @@ class FavAdapter(
 
     override fun onBindViewHolder(holder: FavorViewHolder, position: Int) {
         val curFavor = Favor[position]
-        holder.itemView.tvFavorTitle.text = curFavor.title
+        holder.itemView.tvFavorTitle.text = curFavor.taskName
 
     }
 

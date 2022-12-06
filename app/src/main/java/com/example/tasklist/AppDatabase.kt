@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 
-@Database(entities = [Task::class], version = 1)
+@Database(entities = [Task::class], version = 2, exportSchema = false)
 abstract class AppDatabas : RoomDatabase() {
 
     abstract fun taskDao(): TaskDao
@@ -27,6 +27,7 @@ abstract class AppDatabas : RoomDatabase() {
                     AppDatabas::class.java,
                     "app_database"
                 )
+                    .fallbackToDestructiveMigration()
                     .allowMainThreadQueries()
                     .build()
                 INSTANCE = instance

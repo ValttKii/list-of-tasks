@@ -5,13 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_todo.view.*
 
 class TodoAdapter(
     private val allTasks: List<Task>,
-    private val deleteListener : (Task) -> Unit) : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
+    private val deleteListener : (Task) -> Unit,
+    private val updateListener: (Task) -> Unit,
+)
+
+    : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
 
     class TodoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
@@ -33,6 +38,9 @@ class TodoAdapter(
 
         holder.itemView.findViewById<Button>(R.id.btnDeleteTask).setOnClickListener {
             deleteListener(curTask)
+        }
+        holder.itemView.findViewById<CheckBox>(R.id.cbStarCheck).setOnClickListener {
+            updateListener(curTask)
         }
     }
 
