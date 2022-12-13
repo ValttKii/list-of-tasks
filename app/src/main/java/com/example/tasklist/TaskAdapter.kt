@@ -30,6 +30,7 @@ class TaskAdapter(
         )
     }
 
+
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
 
 
@@ -41,8 +42,11 @@ class TaskAdapter(
             deleteListener(curTask)
         }
         holder.itemView.findViewById<CheckBox>(R.id.cbStarCheck).setOnClickListener {
+
             updateListener(curTask)
+
         }
+
     }
 
     override fun getItemCount(): Int {

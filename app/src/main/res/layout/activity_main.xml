@@ -26,7 +26,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="48dp"
             android:elevation="10dp"
-            android:text="KIRJAUKSET"
+            android:text="MANAGE TODOS"
             android:background="@drawable/bg_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
