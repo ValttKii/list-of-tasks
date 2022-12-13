@@ -9,19 +9,19 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tasklist.databinding.CreadelTodoBinding
-import kotlinx.android.synthetic.main.creadel_todo.*
-import kotlinx.android.synthetic.main.item_todo.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import com.example.tasklist.databinding.ItemTodoBinding
 
-class CreaDelActivity : AppCompatActivity() {
+class TaskActivity : AppCompatActivity() {
+
     private lateinit var binding: CreadelTodoBinding
     private lateinit var viewModel: TaskViewModel
     private lateinit var items: List<Task>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+
         binding = CreadelTodoBinding.inflate(layoutInflater)
         viewModel = ViewModelProvider(
             this,
@@ -30,16 +30,18 @@ class CreaDelActivity : AppCompatActivity() {
 
         viewModel.allTasks.observe(this) {
             items = it
-            binding.rvTodoItems.adapter = TodoAdapter(items, ::deleteTask, ::changeValue)
+            binding.rvTodoItems.adapter = TaskAdapter(items, ::deleteTask, ::changeValue)
         }
         setContentView(binding.root)
         binding.rvTodoItems.apply {
-            layoutManager = LinearLayoutManager(this@CreaDelActivity)
+            layoutManager = LinearLayoutManager(this@TaskActivity)
         }
 
         binding.btnAddTodo.setOnClickListener {
             writeData()
         }
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -66,9 +68,9 @@ class CreaDelActivity : AppCompatActivity() {
             viewModel.insertTask(task)
             binding.etTodoTitle.text.clear()
 
-            Toast.makeText(this@CreaDelActivity, "OK", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@TaskActivity, "OK", Toast.LENGTH_SHORT).show()
         } else {
-            Toast.makeText(this@CreaDelActivity, "NOT OK", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@TaskActivity, "NOT OK", Toast.LENGTH_SHORT).show()
         }
     }
 

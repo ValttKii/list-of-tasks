@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/ollil/AndroidStudioProjects/list-of-tasks/app/src/main/res/layout/activity_main.xml" value="0.23125" />
         <entry key="..\:/Users/vallu/AndroidStudioProjects/TaskList/app/src/main/res/drawable/ic_favorite.xml" value="0.1855" />
+        <entry key="..\:/Users/vallu/AndroidStudioProjects/TaskList/app/src/main/res/drawable/ic_favorite_outline.xml" value="0.2085" />
+        <entry key="..\:/Users/vallu/AndroidStudioProjects/TaskList/app/src/main/res/drawable/selector_favorite_item.xml" value="0.2085" />
         <entry key="..\:/Users/vallu/AndroidStudioProjects/TaskList/app/src/main/res/layout/activity_main.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/vallu/AndroidStudioProjects/TaskList/app/src/main/res/layout/creadel_todo.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/vallu/AndroidStudioProjects/TaskList/app/src/main/res/layout/favorites_todo.xml" value="0.18802083333333333" />

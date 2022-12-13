@@ -1,22 +1,21 @@
 package com.example.tasklist
 
-import android.graphics.Paint.STRIKE_THRU_TEXT_FLAG
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_todo.view.*
 
-class TodoAdapter(
+class TaskAdapter(
     private val allTasks: List<Task>,
     private val deleteListener : (Task) -> Unit,
     private val updateListener: (Task) -> Unit,
+
 )
 
-    : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
+    : RecyclerView.Adapter<TaskAdapter.TodoViewHolder>() {
 
     class TodoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
@@ -32,6 +31,8 @@ class TodoAdapter(
     }
 
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
+
+
 
         val curTask = allTasks[position]
         holder.itemView.tvTodoTitle.text = curTask.taskName

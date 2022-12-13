@@ -17,7 +17,7 @@
             android:name=".FavoriteActivity"
             android:exported="false" />
         <activity
-            android:name=".CreaDelActivity"
+            android:name=".TaskActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
