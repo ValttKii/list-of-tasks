@@ -1,3 +1,3 @@
 # list-of-tasks
 
-READ ME!
+Semi simple todo app.
